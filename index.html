@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AvatarX MVP</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;500&family=Roboto+Slab:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Floating stars -->
+  <div class="stars"></div>
+  <div class="stars-small"></div>
+
+  <!-- Floating 3D words -->
+  <div class="floating-words"></div>
+
+  <!-- Landing Section -->
+  <section class="landing">
+  <!-- AvatarX Card -->
+  <div class="title-card">
+    <h1>AvatarX</h1>
+  </div>
+
+  <!-- Vision Text -->
+  <div class="landing-text">
+    <p class="vision-text">
+      Bridging beginners and experts into Web3. Learn, connect, and grow in a single ecosystem.
+    </p>
+    <p class="cta-text">
+      Join us today and start your journey in the Web3 world!
+    </p>
+
+    <!-- Discord Button -->
+    <a href="https://discord.gg/AZ98twSS" class="btn-discord">
+      Join our Discord
+    </a>
+  </div>
+
+  </div>
+</section>
+
+  <!-- Cards Section -->
+  <section class="cards-section">
+    <div class="card reveal about-card">
+  <h2>About AvatarX</h2>
+  <p>
+    AvatarX is an all-in-one Web3 ecosystem bridging beginners and experts. Our mission is to empower learning, foster community collaboration, and connect talent with real projects. We focus on education, project matching, expert tools, campaigns, and community growth — building the Web3 future together.
+      </p>
+    </div>
+    <div class="card reveal">
+      <h2>Build Core Skills</h2>
+      <p>
+        Start from basics and advance through lessons on blockchain, wallets, NFTs, smart contracts, and Web3 principles. Learn by doing with mini-projects and interactive challenges.
+  </p>
+</div>
+    <div class="card reveal">
+      <h2>Community Engagement</h2>
+      <p>
+        Connect with peers, mentors, and contributors. Participate in discussions, join events, and gain insights from real project teams.
+      </p>
+    </div>
+    <div class="card reveal">
+      <h2>Project Matching</h2>
+      <p>
+        Find projects that align with your skills or interests. Beginners get onboarding tasks; experts discover advanced opportunities.
+      </p>
+    </div>
+    <div class="card reveal">
+      <h2>Expert Tools & Campaigns</h2>
+      <p>
+        Unlock tools for advanced users: analytics dashboards, campaign creation, and project collaboration features.
+      </p>
+    </div>
+    <div class="card reveal">
+      <h2>Learning Hub Experience</h2>
+      <p>
+        Access curated content for all levels. Track learning, earn achievements, and progress through modules designed to turn beginners into confident Web3 contributors.
+      </p>
+    </div>
+  </section>
+
+  <h2>AvatarX – WalletConnect v2 ERC-20 Demo</h2>
+
+<button id="connectBtn" class="wallet-btn">Connect Wallet</button>
+<p id="address"></p>
+<div id="payment" style="display:none;">
+  <input id="token" placeholder="Token address" />
+  <input id="to" placeholder="Recipient address" />
+  <input id="amount" placeholder="Amount" />
+  <button id="sendBtn" class="wallet-btn">Send ERC-20</button>
+</div>
+
+
+  <!-- ethers v6 -->
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.10.0/dist/ethers.umd.min.js"></script>
+
+  <!-- Web3Modal + WalletConnect v2 -->
+  <script src="https://cdn.jsdelivr.net/npm/@web3modal/standalone@2.4.2/dist/index.umd.js"></script>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2026 AvatarX — Building the Web3 ecosystem together.</p>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>

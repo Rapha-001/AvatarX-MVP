@@ -1,0 +1,223 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: radial-gradient(circle at top, #0b0b1a, #1e1e2f);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Floating Stars */
+.stars, .stars-small {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0; left: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+.stars::after, .stars-small::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #fff;
+  border-radius: 50%;
+}
+.stars::after {
+  box-shadow:50px 100px #fff,150px 200px #fff,300px 50px #fff,500px 300px #fff,700px 100px #fff,900px 200px #fff,1100px 50px #fff,1300px 300px #fff;
+  animation: floatStars 50s linear infinite;
+}
+.stars-small::after {
+  width: 1px;
+  height: 1px;
+  box-shadow:30px 50px #fff,90px 100px #fff,120px 150px #fff,200px 50px #fff,400px 200px #fff,600px 300px #fff,800px 100px #fff,1000px 200px #fff;
+  animation: floatStars 80s linear infinite;
+}
+@keyframes floatStars {0%{transform:translateY(0);}100%{transform:translateY(-2000px);}}
+
+/* Floating 3D Words */
+.floating-words {position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;overflow:hidden;z-index:0;}
+.floating-words span {
+  position:absolute;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 14px;
+  color: rgba(255,255,255,0.2);
+  text-shadow:0 0 2px #fff,0 0 4px #6a0dad;
+  white-space: nowrap;
+  user-select:none;
+  transform-style: preserve-3d;
+  animation: floatWord 25s linear infinite;
+}
+@keyframes floatWord {0%{transform:translateY(100vh) rotateY(0deg);opacity:0;}50%{opacity:1;}100%{transform:translateY(-20vh) rotateY(360deg);opacity:0;}}
+
+/* Landing */
+/* Landing Section */
+/* Landing Section */
+.landing {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  padding-top: 60px;
+  position: relative;
+}
+
+/* AvatarX Card */
+.title-card {
+  display: inline-block; /* fits content */
+  background: linear-gradient(45deg,#6a0dad,#3b82f6);
+  padding: 16px 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  margin-bottom: 50px; /* distance to vision text */
+}
+
+.title-card h1 {
+  font-size: 5rem;
+  font-weight: 900;
+  color: #fff;
+  margin: 0;
+}
+
+/* Landing Text */
+.landing-text {
+  max-width: 900px;
+}
+
+.vision-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.cta-text {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+/* Discord Button */
+.btn-discord {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px; /* space between logo and text */
+  background: linear-gradient(45deg,#7289da,#6a0dad);
+  color: #fff;
+  padding: 16px 32px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-discord:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(106,13,173,0.6);
+}
+
+.discord-logo {
+  width: 24px; /* small white logo */
+  height: 24px;
+}
+
+/* Floating Words Background */
+.floating-words span {
+  font-size: 0.9rem; /* tiny words */
+  color: rgba(255,255,255,0.1); /* subtle and opaque */
+  position: absolute;
+  animation: floatWords 20s linear infinite;
+  pointer-events: none; /* words won't interfere with clicks */
+}
+
+/* Example float animation */
+@keyframes floatWords {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-30px) rotate(5deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+/* Floating words effect (background) */
+.floating-words span {
+  font-size: 1rem; /* ~3x bigger */
+  margin: 40px; /* more spacing between words */
+  color: rgba(255,255,255,0.05); /* subtle but visible */
+  position: absolute;
+  animation: floatWords 20s linear infinite;
+}
+
+/* Example float animation */
+@keyframes floatWords {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-40px) rotate(10deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+/* Cards */
+.cards-section {padding:80px 20px;display:flex;flex-direction:column;align-items:center;gap:40px;}
+.card {background:linear-gradient(145deg,#1a0b3d,#0b0b1a);padding:30px;width:90%;max-width:700px;border-radius:18px;box-shadow:0 8px 30px rgba(0,0,0,0.5);opacity:0;transform:translateY(60px);transition:transform 0.8s ease,opacity 0.8s ease;}
+.card h2{font-family:'Roboto Slab', serif;font-size:1.8rem;background:linear-gradient(90deg,#3b82f6,#6a0dad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:15px;}
+.card p{font-size:1.1rem;line-height:1.6;}
+.card.active{opacity:1;transform:translateY(0);}
+
+/* Footer */
+.footer{text-align:center;padding:40px 20px;font-size:0.9rem;background:rgba(20,10,50,0.6);margin-top:50px;}.about-card {
+  background: linear-gradient(145deg,#3b0b5f,#0b1a3b); /* slightly different for focus */
+  border-left: 6px solid #6a0dad; /* accent to highlight */
+  padding: 35px;
+}
+
+.about-card h2 {
+  font-size: 2rem;
+  background: linear-gradient(90deg,#6a0dad,#3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+.about-card p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+body {
+  font-family: Arial, sans-serif;
+  background:
+  padding: 40px;
+}
+
+button {
+  padding: 12px 18px;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+
+
+input {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+
+}.wallet-btn {
+  padding: 12px 18px;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.wallet-btn:hover {
+  background: #4338ca;
+}
